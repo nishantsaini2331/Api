@@ -6,5 +6,5 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send({ name: "nishant" });
+    res.send({ name: "nishant" , branch:"cse" });
 });
