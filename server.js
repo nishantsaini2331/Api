@@ -6,7 +6,7 @@ app.listen(3000, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send({ name: "nishant" , branch:"cse" , year:"3rd" });
+    res.send({ name: "nishant" , branch:"cse"  });
 });
 app.get("/api/products", (req, res) => {
     res.send({ name: "iphone 15" , prize: 85000 , rating:4.5 });
