@@ -20,6 +20,9 @@ app.get("/sub", (req, res) => {
     const { a, b } = req.query;
     res.json({ sub: Number(a) - Number(b) });
 });
+app.get("/random", (req, res) => {
+    res.send("heeloo Dost");
+});
 
 app.use((req, res, next) => {
     console.log("1st");
