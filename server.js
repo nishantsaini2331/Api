@@ -5,7 +5,6 @@ app.listen(3000, () => {
     console.log("server started");
 });
 
-
 app.get("/", (req, res, next) => {
     res.send({ name: "nishant" });
 });
@@ -15,7 +14,11 @@ app.get("/api/products", (req, res, next) => {
 
 app.get("/sum", (req, res) => {
     const { a, b } = req.query;
-    res.json({ sum: Number(a) + Number(b), sub: Number(a) - Number(b) });
+    res.json({ sum: Number(a) + Number(b) });
+});
+app.get("/sub", (req, res) => {
+    const { a, b } = req.query;
+    res.json({ sub: Number(a) - Number(b) });
 });
 
 app.use((req, res, next) => {
