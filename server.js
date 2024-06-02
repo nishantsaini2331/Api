@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
+
+// app.use(cors())
 
 app.listen(3000, () => {
     console.log("server started");
@@ -25,7 +28,7 @@ app.get("/random", (req, res) => {
 });
 
 app.use((req, res, next) => {
-    console.log("1st");
+    // console.log("1st");
     const error = new Error("Not Found");
     error.status = 404;
     next(error);
